@@ -11,6 +11,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 <body>
     <div class="row">
@@ -19,10 +21,10 @@
             <form class="text-center border border-light p-5" action="#!">
 
                 <p class="h4 mb-4">Iniciar sesión</p>
-            
-                <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-            
-                <input type="password" id="defaultLoginFormPassword" class="form-control mb-2" placeholder="Contraseña">
+
+                <input type="email" id="email" class="form-control mb-4" placeholder="E-mail">
+                
+                <input type="password" id="password" class="form-control mb-2" placeholder="Contraseña">
             
                 <div class="d-flex justify-content-around">
                     <div>
@@ -30,11 +32,11 @@
                             <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
                             <label class="custom-control-label" for="defaultLoginFormRemember">Recuérdame</label>
                         </div>
-                        <a href="">¿Olvidaste tu contraseña?</a>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
                     </div>
                 </div>
             
-                <a href="index.html" class="btn btn-danger btn-block my-4" role="button">Iniciar sesión</a>
+                <button type="submit" class="btn btn-block" style="background-color: #38003c; color: white;" onclick=validarEmail()>Iniciar sesión</button>
             
                 <p>¿No tienes cuenta?
                     <a href="">Regístrate</a>
