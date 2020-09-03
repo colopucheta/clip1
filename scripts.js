@@ -1,23 +1,7 @@
-function validarEmail() {
-    var email = document.getElementById("email");
-    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-    if (emailRegex.test(email.value)){
-        validarPassword();
-    } else {
-        Swal.fire({
-            title: "La dirección de email es incorrecta.",
-            confirmButtonColor: "#e90052"
-        });
-        email.focus();
-    }
-  }
-
-  function validarPassword(){
-    var password = document.getElementById("password");
-    if(password.value == null || password.value.length == 0){
-    Swal.fire("Ingrese la contraseña.");
-    }
-    else{
+function validarLogin(){
+    validarEmail();
+    validarPassword();
+    if(validarEmail() && validarPassword()){
         Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -28,6 +12,36 @@ function validarEmail() {
         setTimeout(() => {
             window.location.href = "index.html";
         }, 1500);
+    }
+}
+
+function validarEmail() {
+    var resp
+    var email = document.getElementById("email");
+    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    if (!emailRegex.test(email.value)){
+        Swal.fire({
+            title: "La dirección de email es incorrecta.",
+            confirmButtonColor: "#e90052"
+        });
+        email.focus();
+        return false;
+    }else{
+        return true;
+    }
+  }
+
+  function validarPassword(){
+    var password = document.getElementById("password");
+    if(password.value == null || password.value.length == 0){
+        Swal.fire({
+            title: "Ingrese la contraseña.",
+            confirmButtonColor: "#e90052"
+        });
+        return false;
+    }
+    else{
+        return true;
     }
   }
 
