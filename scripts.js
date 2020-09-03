@@ -81,6 +81,8 @@ window.onload = function(){
     var contador = 4;
     document.getElementById("boton").onclick = function(){
         var respuesta = document.getElementById("respuesta");
+        var pista1 = document.getElementById("pista1");
+        var pista2 = document.getElementById("pista2");
         if(respuesta.value == "Ozil"){
             Swal.fire({
                 title: 'Ganador!',
@@ -89,12 +91,28 @@ window.onload = function(){
                 imageWidth: 400,
                 imageHeight: 400,
                 imageAlt: 'Ozil',
+                timer: 2000
               })
+              setTimeout(() => {
+                window.location.href = "riddle.html";
+            }, 2000);
         }else if(contador > 1){
-            contador--;
-            document.getElementById("contador").innerHTML = contador;
+            if(contador == 3){
+                pista1.innerHTML = "Pista 1: Juega en un equipo de Londres.";
+                contador--;
+                document.getElementById("contador").innerHTML = contador;
+            }else{
+                if(contador == 2){
+                    pista2.innerHTML = "Pista 2: Es de origen turco.";
+                    contador--;
+                    document.getElementById("contador").innerHTML = contador;
+                }
+                else{
+                    contador--;
+                    document.getElementById("contador").innerHTML = contador;
+                }
+            }
         }else if(contador = 1){
-            contador--;
             Swal.fire({
                 title: 'Has perdido',
                 text: 'La respuesta era: Mesut Ozil',
@@ -102,11 +120,11 @@ window.onload = function(){
                 imageWidth: 400,
                 imageHeight: 400,
                 imageAlt: 'Ozil',
-                timer: 2500
+                timer: 2000
               })
               setTimeout(() => {
                 window.location.href = "riddle.html";
-            }, 2500);
+            }, 2000);
         }
         
     }
