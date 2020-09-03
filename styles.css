@@ -1,3 +1,7 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 .fa {
 
   text-align: center;
@@ -47,7 +51,6 @@ footer {
 .sidenav {
   padding-top: 20px;
   background-color: #f1f1f1;
-  height: 100%;
 }
 
 /* Set black background color, white text and some padding */

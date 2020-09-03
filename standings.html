@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Premier League - Standings</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link  rel="icon"   href="img/pl.ico" type="icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-custom navbar-dark">
+        <a class="navbar-brand" href="index.html"><img src="img/pl.ico" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="standings.html">Posiciones</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="scorers.html">Goleadores</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.html">Contacto</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="riddle.html">Adivinanza</a>
+            </li>      
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li><a href="login.html" style="color: white;"><i class="fa fa-fw fa-user"></i>Iniciar sesión</a></li>
+          </ul>
+        </div>  
+      </nav>
+
+      <div class="container-fluid text-center">    
+        <div class="row content">
+          <div class="col-sm-2 sidenav">
+            <p class="h3 ">Clubes</p>
+            <hr>
+            <p><a href="https://www.arsenal.com/"><img src="img/ars.png" alt=""></a></p>
+            <p><a href="https://www.avfc.co.uk/"><img src="img/avl.png" alt=""></a></p>
+            <p><a href="https://www.brightonandhovealbion.com/"><img src="img/bri.png" alt=""></a></p>
+            <p><a href="https://www.burnleyfootballclub.com/"><img src="img/bur.png" alt=""></a></p>
+            <p><a href="https://www.chelseafc.com/en"><img src="img/che.png" alt=""></a></p>
+            <p><a href="https://www.cpfc.co.uk/"><img src="img/cpl.png" alt=""></a></p>
+            <p><a href="https://www.evertonfc.com/home"><img src="img/eve.png" alt=""></a></p>
+            <p><a href="https://www.fulhamfc.com/"><img src="img/ful.png" alt=""></a></p>
+            <p><a href="https://www.leedsunited.com/"><img src="img/lee.png" alt=""></a></p>
+            <p><a href="https://www.lcfc.com/"><img src="img/lei.png" alt=""></a></p>
+            <p><a href="https://www.liverpoolfc.com/"><img src="img/liv.png" alt=""></a></p>
+            <p><a href="https://www.mancity.com/"><img src="img/mci.png" alt=""></a></p>
+            <p><a href="https://www.manutd.com/en"><img src="img/mut.png" alt=""></a></p>
+            <p><a href="https://www.nufc.co.uk/"><img src="img/new.png" alt=""></a></p>
+            <p><a href="https://www.sufc.co.uk/"><img src="img/shf.png" alt=""></a></p>
+            <p><a href="https://www.southamptonfc.com/"><img src="img/sou.png" alt=""></a></p>
+            <p><a href="https://www.tottenhamhotspur.com/"><img src="img/tot.png" alt=""></a></p>
+            <p><a href="https://www.wba.co.uk/"><img src="img/wba.png" alt=""></a></p>
+            <p><a href="https://www.whufc.com/"><img src="img/wha.png" alt=""></a></p>
+            <p><a href="https://www.wolves.co.uk/"><img src="img/wol.png" alt=""></a></p>
+          </div>
+          <div class="col-sm-8 text-left"> 
+            <h1 class="py-4 text-center" style="background-color:#00ff85; color:#38003c;"><b>Tabla de posiciones</b></h1>
+            <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Posición</th>
+                    <th>Club</th>
+                    <th>PJ</th>
+                    <th>PG</th>
+                    <th>PE</th>
+                    <th>PP</th>
+                    <th>GF</th>
+                    <th>GC</th>
+                    <th>DG</th>
+                    <th>Pts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background-color:lightgreen;">
+                    <td>1</td>
+                    <td><img src="img/liv.png" alt="" style="height: 20px;"> Liverpool</td>
+                    <td>38</td>
+                    <td>32</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>85</td>
+                    <td>33</td>
+                    <td>52</td>
+                    <td style="font-weight: bold;">99</td>
+                  </tr>
+                  <tr style="background-color: lightskyblue;">
+                    <td>2</td>
+                    <td><img src="img/mci.png" alt="" style="height: 20px;"> Manchester City</td>
+                    <td>38</td>
+                    <td>26</td>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>102</td>
+                    <td>35</td>
+                    <td>67</td>
+                    <td style="font-weight: bold;">81</td>
+                  </tr>
+                  <tr style="background-color: lightskyblue;">
+                    <td>3</td>
+                    <td><img src="img/mut.png" alt="" style="height: 20px;"> Manchester United</td>
+                    <td>38</td>
+                    <td>18</td>
+                    <td>12</td>
+                    <td>8</td>
+                    <td>66</td>
+                    <td>36</td>
+                    <td>30</td>
+                    <td style="font-weight: bold;">66</td>
+                  </tr>
+                  <tr style="background-color: lightskyblue;">
+                    <td>4</td>
+                    <td><img src="img/che.png" alt="" style="height: 20px;"> Chelsea</td>
+                    <td>38</td>
+                    <td>20</td>
+                    <td>6</td>
+                    <td>12</td>
+                    <td>69</td>
+                    <td>54</td>
+                    <td>15</td>
+                    <td style="font-weight: bold;">66</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><img src="img/lei.png" alt="" style="height: 20px;"> Leicester</td>
+                    <td>38</td>
+                    <td>18</td>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>67</td>
+                    <td>41</td>
+                    <td>26</td>
+                    <td style="font-weight: bold;">62</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><img src="img/tot.png" alt="" style="height: 20px;"> Tottemham</td>
+                    <td>38</td>
+                    <td>16</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>61</td>
+                    <td>47</td>
+                    <td>14</td>
+                    <td style="font-weight: bold;">59</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td><img src="img/wol.png" alt="" style="height: 20px;"> Wolverhampton</td>
+                    <td>38</td>
+                    <td>15</td>
+                    <td>14</td>
+                    <td>9</td>
+                    <td>51</td>
+                    <td>40</td>
+                    <td>11</td>
+                    <td style="font-weight: bold;">59</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td><img src="img/ars.png" alt="" style="height: 20px;"> Arsenal</td>
+                    <td>38</td>
+                    <td>14</td>
+                    <td>14</td>
+                    <td>10</td>
+                    <td>56</td>
+                    <td>48</td>
+                    <td>8</td>
+                    <td style="font-weight: bold;">56</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td><img src="img/shf.png" alt="" style="height: 20px;"> Sheffield United</td>
+                    <td>38</td>
+                    <td>14</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>39</td>
+                    <td>39</td>
+                    <td>0</td>
+                    <td style="font-weight: bold;">54</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td><img src="img/bur.png" alt="" style="height: 20px;"> Burnley</td>
+                    <td>38</td>
+                    <td>15</td>
+                    <td>9</td>
+                    <td>14</td>
+                    <td>43</td>
+                    <td>50</td>
+                    <td>-7</td>
+                    <td style="font-weight: bold;">54</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td><img src="img/sou.png" alt="" style="height: 20px;"> Southamptom</td>
+                    <td>38</td>
+                    <td>15</td>
+                    <td>7</td>
+                    <td>16</td>
+                    <td>51</td>
+                    <td>60</td>
+                    <td>-9</td>
+                    <td style="font-weight: bold;">52</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td><img src="img/eve.png" alt="" style="height: 20px;"> Everton</td>
+                    <td>38</td>
+                    <td>13</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>44</td>
+                    <td>56</td>
+                    <td>-12</td>
+                    <td style="font-weight: bold;">49</td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td><img src="img/new.png" alt="" style="height: 20px;"> Newcastle</td>
+                    <td>38</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>16</td>
+                    <td>38</td>
+                    <td>58</td>
+                    <td>-20</td>
+                    <td style="font-weight: bold;">44</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td><img src="img/cpl.png" alt="" style="height: 20px;"> Crystal Palace</td>
+                    <td>38</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>17</td>
+                    <td>31</td>
+                    <td>50</td>
+                    <td>-19</td>
+                    <td style="font-weight: bold;">43</td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td><img src="img/bri.png" alt="" style="height: 20px;"> Brighton</td>
+                    <td>38</td>
+                    <td>9</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>39</td>
+                    <td>54</td>
+                    <td>-15</td>
+                    <td style="font-weight: bold;">41</td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td><img src="img/wha.png" alt="" style="height: 20px;"> West Ham</td>
+                    <td>38</td>
+                    <td>10</td>
+                    <td>9</td>
+                    <td>19</td>
+                    <td>49</td>
+                    <td>62</td>
+                    <td>-13</td>
+                    <td style="font-weight: bold;">39</td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td><img src="img/avl.png" alt="" style="height: 20px;"> Aston Villa</td>
+                    <td>38</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td>21</td>
+                    <td>41</td>
+                    <td>67</td>
+                    <td>-26</td>
+                    <td style="font-weight: bold;">35</td>
+                  </tr>
+                  <tr style="background-color: lightsalmon;">
+                    <td>18</td>
+                    <td><img src="img/bou.png" alt="" style="height: 20px;"> Bournemouth</td>
+                    <td>38</td>
+                    <td>9</td>
+                    <td>7</td>
+                    <td>22</td>
+                    <td>40</td>
+                    <td>65</td>
+                    <td>-25</td>
+                    <td style="font-weight: bold;">34</td>
+                  </tr>
+                  <tr style="background-color: lightsalmon;">
+                    <td>19</td>
+                    <td><img src="img/wat.png" alt="" style="height: 20px;"> Watford</td>
+                    <td>38</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>36</td>
+                    <td>64</td>
+                    <td>-28</td>
+                    <td style="font-weight: bold;">34</td>
+                  </tr>
+                  <tr style="background-color: lightsalmon;">
+                    <td>20</td>
+                    <td><img src="img/nor.png" alt="" style="height: 20px;"> Norwich City</td>
+                    <td>38</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>27</td>
+                    <td>26</td>
+                    <td>75</td>
+                    <td>-49</td>
+                    <td style="font-weight: bold;">21</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-sm-2 sidenav">
+            <p class="h3">Sponsors</p>
+            <hr>
+            <p><a href="https://www.ea.com/games/fifa/fifa-21"><img src="img/eas.png" alt="" style="height: 50px; width: 50px;"></a></p>
+            <p><a href="https://home.barclays/"><img src="img/bcl.png" alt="" style="height: 50px;"></a></p>
+            <p><a href="https://www.budweiser.com/"><img src="img/bud.png" alt="" style="width: 70px; height: 35px;"></a></p>
+            <p><a href="https://www.coca-cola.co.uk/home"><img src="img/coca.png" alt="" style="width: 70px; height: 35px;"></a></p>
+            <p><a href="https://www.nike.com/gb/"><img src="img/nike.png" alt="" style="width: 70px;"></a></p>
+            <p><a href="https://www.tagheuer.com/ar/es/"><img src="img/tagh.png" alt="" style="width: 50px;"></a></p>
+          </div>
+        </div>
+      </div>
+<footer class="container-fluid text-center">
+  <p>Hecho por Ignacio Pucheta</p>
+</footer>
+
+</body>
+</html>
