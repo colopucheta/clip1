@@ -111,6 +111,10 @@ window.onload = function(){
                 window.location.href = "riddle.html";
             }, 2000);
         }else if(contador > 1){
+            Swal.fire({
+                title: "Respuesta incorrecta.",
+                confirmButtonColor: "#e90052"
+            });
             if(contador == 3){
                 pista1.innerHTML = "Pista 1: Juega en un equipo de Londres.";
                 contador--;
